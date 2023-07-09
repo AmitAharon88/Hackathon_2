@@ -10,10 +10,13 @@ from rest_framework.permissions import (AllowAny,IsAuthenticated)
 def home(request):
    return render(request, 'index.html')
 
+def addExpense(request):
+   return render(request, 'addExpense.html')
+
 class ExpenseCreateView(CreateAPIView) :
    queryset = Expense.objects.all()
    serializer_class = ExpenseSerializer
-   permission_classes = (IsAuthenticated, )
+
    
 class ExpenseListView(ListAPIView):
    queryset = Expense.objects.all()

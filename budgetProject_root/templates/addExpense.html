@@ -1,8 +1,17 @@
-{% extends 'base.html' %} {% block content %}
+{% load static %}
 
-<h1> New Expense: </h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> New Expense: </h1>
 <div class="form">
     <form method="post" id="expenseForm">
+        {%csrf_token%}
         <input type="text" id="month"/>
         <datalist id="monthOptions" class="dropDown">
             <!-- Options added -->
@@ -16,6 +25,10 @@
         <input type="number" id="amount" placeholder="$$"/>
         <button id="submitForm" type="submit"> Submit </button>
     </form>
+    <script src="{% static 'js/main.js' %}"></script>
 </div>
+</body>
+</html>
 
-{% endblock content %}
+
+

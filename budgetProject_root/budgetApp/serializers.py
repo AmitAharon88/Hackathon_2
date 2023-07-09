@@ -24,5 +24,5 @@ class MonthlyBudgetSerializer(serializers.ModelSerializer) :
 class ExpenseSerializer(serializers.ModelSerializer) :
     class Meta :
         model = Expense
-        fields = ('user', 'day', 'category', 'type', 'amount')
+        fields = ('day', 'category', 'type', 'amount')
     
