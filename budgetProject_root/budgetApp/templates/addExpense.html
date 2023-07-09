@@ -1,0 +1,21 @@
+{% extends 'base.html' %} {% block content %}
+
+<h1> New Expense: </h1>
+<div class="form">
+    <form method="post" id="expenseForm">
+        <input type="text" id="month"/>
+        <datalist id="monthOptions" class="dropDown">
+            <!-- Options added -->
+        </datalist>
+        <input type="number" id="day" min="1" max="31"/>
+        <input type="text" id="category"/>
+        <datalist id="categoryOptions" class="dropDown">
+            <!-- Options added -->
+        </datalist>
+        <input type="text" id="type" placeholder="type"/>
+        <input type="number" id="amount" placeholder="$$"/>
+        <button id="submitForm" type="submit"> Submit </button>
+    </form>
+</div>
+
+{% endblock content %}

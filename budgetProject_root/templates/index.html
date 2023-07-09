@@ -1,0 +1,74 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Calculator</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    {% load bootstrap5 %} {% bootstrap_css %}
+</head>
+<body>
+    {% include 'navbar.html' %}
+
+    <h1>Welcome {{user.first_name}}</h1>
+
+    <div class="p-5 text-center bg-image rounded-3" style="
+        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8ZrcqJT_iu0bEy78NEFPUD11aUz3r7hGoRQ&usqp=CAU');
+        background-size: cover;
+      ">
+      <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+        <div class="d-flex justify-content-center align-items-center h-100">
+          <div class="text-white">
+            <h1 class="mb-3">We've made budgetting easy</h1>
+            <h4 class="mb-3">Budgets can be tricky, so why break your head over a calculator, when you've got us!</h4>
+            <h4 class="mb-3">Spend less time calculating and more time saving</h4>
+
+            <a class="btn btn-outline-light btn-lg" href="#!" role="button">Get Started</a>
+          </div>
+        </div>
+      </div>
+    </div>
+      
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card h-100">
+            <img src="https://cdn-icons-png.flaticon.com/128/9135/9135603.png" class="card-img-top" alt="clock">
+            <div class="card-body">
+                <h5 class="card-title">Time Saver</h5>
+                <p class="card-text">Budget Calculator takes the stress and time out of budgeting. Your monthly spendings and savings are just a click away.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="https://cdn-icons-png.flaticon.com/128/7748/7748671.png" class="card-img-top" alt="bullseye">
+            <div class="card-body">
+                <h5 class="card-title">Accurate</h5>
+                <p class="card-text">Make no mistake, we make no mistakes! Calculations are checked and double checked to ensure accuracy.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="https://cdn-icons-png.flaticon.com/128/2519/2519343.png" class="card-img-top" alt="approved">
+            <div class="card-body">
+                <h5 class="card-title">Stamp of Approval</h5>
+                <p class="card-text">Budget Calculater has recieved the Acountants Approval Award in 2023.</p>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="card text-center">
+        <div class="card-body">
+          <h5 class="card-title">What are you waiting for?</h5>
+          <p class="card-text">Get started today and let you savings begin.</p>
+          <a href="#" class="btn btn-primary">Get Started</a>
+        </div>
+    </div>
+    {% include 'footer.html' %}
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

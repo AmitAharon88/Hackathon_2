@@ -6,17 +6,23 @@ class AccountInfoSerializer(serializers.ModelSerializer) :
         model = AccountInfo
         fields = ('first_name', 'last_name', 'username', 'password')
         
-class MonthlyBudgeSerializer(serializers.ModelSerializer) :
+class MonthSerializer(serializers.ModelSerializer) :
     class Meta :
-        model = MonthlyBudget
-        fields = ('first_name', 'month', 'budget')
+        model = Month
+        fields = ('month')
 
 class CategorySerializer(serializers.ModelSerializer) :
     class Meta :
         model = Category
-        fields = ('month', 'type')
+        fields = ('name')
 
+class MonthlyBudgetSerializer(serializers.ModelSerializer) :
+    class Meta :
+        model = Expense
+        fields = ('username','month', 'budget')
+        
 class ExpenseSerializer(serializers.ModelSerializer) :
     class Meta :
         model = Expense
-        fields = ('month', 'category', 'type', 'amount')
+        fields = ('user', 'day', 'category', 'type', 'amount')
+    
