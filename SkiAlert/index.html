@@ -4,33 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ski Alert</title>
+    <link rel='stylesheet' href='styles.css'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVHvWUi0yewRs_aZ_U1VSS4eN9Qer_rtXXZg&usqp=CAU" alt="Logo" width="33" height="35" class="d-inline-block align-text-top">
-            Ski Alert</a>
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
+    <nav class="navbar bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="https://cdn-icons-png.flaticon.com/128/2404/2404113.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+          SkiAlert
+        </a>
+      </div>
     </nav>
-    <h1>Welcome</h1>
-    <div class="p-5 text-center bg-image rounded-3" style="
-    background-image: url('data:image/jpeg;base64,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');
-    background-size: cover;
-  ">
+    
+    <div class="p-5 text-center bg-image rounded-3" style="background-image: url('hero6.png'); background-size: cover;">
       <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
         <div class="d-flex justify-content-center align-items-center h-100">
           <div class="text-white">
-            <h1 class="mb-3">We've made deciding where to ski easier!</h1>
-            <h4 class="mb-3">Let us do the hard lifting.</h4>
-            <h4 class="mb-3">Tell us where you're thinking of sking and we'll make sure to give you the most up to date ski forcast.</h4>
+            <h1 id="mainHead" class="mb-3">We've made deciding where to ski a breeze</h1>
+            <h4 class="mb-3 subHead">Find the most up to date ski forcast,</h4>
+            <h4 class="mb-3 subHead">at your fingertips!</h4>
             <div class="mb-3 container">
-                <label for="exampleFormControlInput1 skiResort" class="form-label">Enter a ski resport:</label>
+                <!-- <label for="exampleFormControlInput1 skiResort" class="form-label">Enter a ski resport:</label> -->
                 <div class="row justify-content-center">
                     <div class="col-sm-6">
-                      <input type="text" name="skiResport" class="form-control" id="exampleFormControlInput1 skiResport"  placeholder="Gore Mountain">
+                      <input type="text" name="skiResport" class="form-control" id="exampleFormControlInput1 skiResport"  placeholder="'Enter Resport Here'">
                     </div>
                 </div>
             </div>
@@ -39,12 +39,45 @@
         </div>
       </div>
     </div>
-    <p></p>
-  <footer>
-    <div class="text-center p-3" style="background-color: grey; color: white">
-      © 2023 Copyright:
-      <a class="text-white" href="https://mdbootstrap.com/">Ski Alert</a>
+    <div id="fullForecast">
+      <div id="forecastContainer">
+        <h1 id="resort"></h1>
+        <p id="location"></p>
+        <p id="forecast"></p>
+        <div class="text-center" id="header"></div>
+        <div class="row">
+          <div class="col-sm-6 mb-3 mb-sm-0">
+            <div class="cardContainer">
+              <div class="card-body text-center" id='body'>
+                <h5 class="card-title" id="dayAm"></h5>
+                <p class="card-text" id="summaryAm"></p>
+                <p class="card-text" id="tempAm"></p>
+                <p class="card-text" id="windAm"></p>
+                <p class="card-text" id="snowAm"></p>
+                <p class="card-text" id="rainAm"></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="cardContainer">
+              <div class="card-body text-center"id='body'>
+                <h5 class="card-title" id="dayPm"></h5>
+                <p class="card-text" id="summaryPm"></p>
+                <p class="card-text" id="tempPm"></p>
+                <p class="card-text" id="windPm"></p>
+                <p class="card-text" id="snowPm"></p>
+                <p class="card-text" id="rainPm"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center" id="footer">
+          <small class="text-body-secondary" id="cardFooter"></small>
+        </div>
+      </div>
     </div>
+  <footer>
+    <div class="text-center p-3" style="color: black">© 2023 Copyright - SkiAlert.com</div>
   </footer>
     <script src="script.js"></script>
 </body>

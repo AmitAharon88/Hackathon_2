@@ -1,0 +1,33 @@
+* {
+    font-family: 'Raleway', sans-serif; 
+}
+
+nav {
+    background-color: white;
+}
+
+.navbar-brand {
+    color: black;
+}
+
+.mask {
+    padding: 20px;
+}
+
+#mainHead {
+    font-family: 'Oleo Script', cursive !important;
+}
+
+#header {
+    background-image: url('forecast.png');
+    color: white;
+}
+
+#forecastContainer {
+    margin: 20px;
+}
+
+#footer {
+    background-image: url('forecast2.png');
+    color: white;
+}
