@@ -10,7 +10,7 @@ urlpatterns = [
     path('api-auth/', include('rest_framework.urls')),
     path('accounts/', include('accounts.urls')),
     path('api/budget/', include('budgetApp.urls')),
-    path('budget/expense/<pk>/', expense_detail, name='post-detail'),
+    # path('budget/expense/<pk>/', expense_detail, name='post-detail'),
     path('home/', home, name='home'),
     path('add/', addExpense, name = 'form'),
 ]

@@ -3,17 +3,22 @@ const root = document.getElementById('root');
 
 
 function createExpense(day, category, type, amount) {
+    const object = {
+        day: day,
+        category: category,
+        type: type,
+        amount: amount
+    }
+    console.log(object);
     console.log('hello')
     const data = {
         method: 'POST',
         headers: {
-            content_type: 'application/json'
-        },
-        body: JSON.stringify({
-            user, day, category, type, amount
-        })
+            "Content-Type": "application/json",
+          },
+        body: JSON.stringify(object)
     }
-    fetch('/api/createExpense/', data).then(result => console.log(`test: ${result}`))
+    fetch('/api/budget/add-expense/', data).then(result => console.log(`test: ${result}`))
  }
 
 

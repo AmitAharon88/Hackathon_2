@@ -7,12 +7,12 @@ function button () {
 
 function resortValue(event) {
     event.preventDefault();
-    // window.location.href = "result.html";
     const userInput = document.querySelector('input');
     const inputValue = userInput.value;
     console.log(inputValue)
     const urlResportValue = inputValue.replace(/ /g, '%20');
     getSkiData(urlResportValue);
+    window.location.href = "result.html";
 }
 
 

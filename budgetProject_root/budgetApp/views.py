@@ -14,9 +14,9 @@ def addExpense(request):
    return render(request, 'addExpense.html')
 
 class ExpenseCreateView(CreateAPIView) :
+   print('test')
    queryset = Expense.objects.all()
    serializer_class = ExpenseSerializer
-
    
 class ExpenseListView(ListAPIView):
    queryset = Expense.objects.all()
