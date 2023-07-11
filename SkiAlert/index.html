@@ -16,10 +16,15 @@
           <img src="https://cdn-icons-png.flaticon.com/128/2404/2404113.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
           SkiAlert
         </a>
+        <!-- <label class="switch">
+          <input type="checkbox" id = "btn2">
+          <span class="slider round"></span>
+        </label> -->
       </div>
     </nav>
     
-    <div class="p-5 text-center bg-image rounded-3" style="background-image: url('hero6.png'); background-size: cover;">
+    
+    <div class="p-5 text-center bg-image rounded-3" id="hero" style="background-image: url('hero6.png'); background-size: cover;">
       <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
         <div class="d-flex justify-content-center align-items-center h-100">
           <div class="text-white">
@@ -27,7 +32,6 @@
             <h4 class="mb-3 subHead">Find the most up to date ski forcast,</h4>
             <h4 class="mb-3 subHead">at your fingertips!</h4>
             <div class="mb-3 container">
-                <!-- <label for="exampleFormControlInput1 skiResort" class="form-label">Enter a ski resport:</label> -->
                 <div class="row justify-content-center">
                     <div class="col-sm-6">
                       <input type="text" name="skiResport" class="form-control" id="exampleFormControlInput1 skiResport"  placeholder="'Enter Resport Here'">
@@ -39,15 +43,16 @@
         </div>
       </div>
     </div>
+    <div id="loading"></div>
     <div id="fullForecast">
       <div id="forecastContainer">
-        <h1 id="resort"></h1>
-        <p id="location"></p>
-        <p id="forecast"></p>
-        <div class="text-center" id="header"></div>
+        <h1 id="resort" class="reload"></h1>
+        <p id="location" class="reload"></p>
+        <p id="forecast" class="reload"></p>
+        <div class="text-center reload" id="header"></div>
         <div class="row">
           <div class="col-sm-6 mb-3 mb-sm-0">
-            <div class="cardContainer">
+            <div class="cardContainer reload">
               <div class="card-body text-center" id='body'>
                 <h5 class="card-title" id="dayAm"></h5>
                 <p class="card-text" id="summaryAm"></p>
@@ -59,7 +64,7 @@
             </div>
           </div>
           <div class="col-sm-6">
-            <div class="cardContainer">
+            <div class="cardContainer reload">
               <div class="card-body text-center"id='body'>
                 <h5 class="card-title" id="dayPm"></h5>
                 <p class="card-text" id="summaryPm"></p>
@@ -71,7 +76,7 @@
             </div>
           </div>
         </div>
-        <div class="text-center" id="footer">
+        <div class="text-center reload" id="footer">
           <small class="text-body-secondary" id="cardFooter"></small>
         </div>
       </div>

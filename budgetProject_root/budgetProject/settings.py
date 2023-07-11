@@ -29,7 +29,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'budgetApp',
     "bootstrap5",
-    "accounts"
+    "accounts",
+    "corsheaders"
 ]
 
 MIDDLEWARE = [

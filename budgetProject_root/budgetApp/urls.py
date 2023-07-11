@@ -3,6 +3,6 @@ from .views import *
 
 urlpatterns = [
     path('expense-history', ExpenseListView.as_view(), name = 'expenseHistory'),
-    path('add-expense/', ExpenseCreateView.as_view(), name = 'addExpense'),
+    path('add-expense/', ExpenseCreateView.as_view(), name = 'createExpense'),
     # path('expense/<pk>', ExpenseDetailView.as_view(), name = 'expenseDetail')
 ]

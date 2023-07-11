@@ -1,23 +1,9 @@
 
 const buttonElement = document.getElementById("btn");
-const buttonElement2 = document.getElementById("btn2");
 
 function button () {
     buttonElement.addEventListener("click", resortValue);
-    // buttonElement2.addEventListener("click", changeMode);
 }
-
-// function changeMode() {
-//     document.body.classList.toggle("dark-theme");
-//     const cards = document.getElementsByClassName('cardContainer');
-//     cards.classList.toggle("dark-theme");
-//     const toggleEl = document.getElementById('btn2');
-//     if (toggleEl.innerHTML == "Dark Mode") {
-//         toggleEl.innerHTML = "Normal Mode";
-//      } else {
-//         toggleEl.innerHTML = "Dark Mode"
-//      }
-// };
 
 function resortValue(event) {
     event.preventDefault();
@@ -32,11 +18,9 @@ const loader = document.getElementById('loading');
 
 function displayLoading() {
     loader.classList.add('display');
-    // const forecast = document.getElementsByClassName('reload');
-    // for (const data of forecast) {
-    //     data.textContent = '';
-    // }
-};
+    // const forecast = document.getElementById('fullForecast');
+    // document.body.removeChild(forecast);
+}
 
 function hideLoading() {
     loader.classList.remove('display');
@@ -55,7 +39,6 @@ async function getSkiData(resort) {
         const response = await fetch(url, options)
         if(response.ok) {
             const skiObj = await response.json()
-            console.log(skiObj)
             hideLoading()
             addForecast(skiObj)
         } else {
@@ -67,15 +50,10 @@ async function getSkiData(resort) {
 }
 
 function addForecast(Obj) {
-    //resort
-    const resortEl = document.getElementById('resort');
-    resortEl.textContent = '';
-    const resortText = document.createTextNode(Obj['basicInfo']['name']);
-    resortEl.appendChild(resortText);
     //location
     const locationEl = document.getElementById('location');
     locationEl.textContent = '';
-    const loactionText = document.createTextNode(`Location: ${Obj['basicInfo']['region']}`);
+    const loactionText = document.createTextNode(`Location: ${Obj['basicInfo']['name']}`);
     locationEl.appendChild(loactionText);
 
     //3 day forcast
@@ -137,12 +115,12 @@ function addForecast(Obj) {
 
     const snowEl = document.getElementById('snowAm');
     snowEl.textContent = '';
-    const snowText = document.createTextNode(`Snowfall: ${(am['snow'])} in`);
+    const snowText = document.createTextNode(`Snowfall: ${am['snow']}`);
     snowEl.appendChild(snowText);
 
     const rainEl = document.getElementById('rainAm');
     rainEl.textContent = '';
-    const rainText = document.createTextNode(`Rainfall: ${parseFloat(am['rain'])} in`);
+    const rainText = document.createTextNode(`Rainfall: ${am['rain']}`);
     rainEl.appendChild(rainText);
 
     // PM card
@@ -175,13 +153,14 @@ function addForecast(Obj) {
 
     const snowPMEl = document.getElementById('snowPm');
     snowPMEl.textContent = '';
-    const snowPMText = document.createTextNode(`Snowfall: ${parseFloat(pm['snow'])} in`);
+    const snowPMText = document.createTextNode(`Snowfall: ${pm['snow']}`);
     snowPMEl.appendChild(snowPMText);
 
     const rainPMEl = document.getElementById('rainPm');
     rainPMEl.textContent = '';
-    const rainPMText = document.createTextNode(`Rainfall: ${parseFloat(pm['rain'])} in`);
+    const rainPMText = document.createTextNode(`Rainfall: ${pm['rain']}`);
     rainPMEl.appendChild(rainPMText);
-};
+
+}
 
 button();
