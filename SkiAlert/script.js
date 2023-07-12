@@ -1,6 +1,6 @@
 
 const buttonElement = document.getElementById("btn");
-const buttonElement2 = document.getElementById("btn2");
+// const buttonElement2 = document.getElementById("btn2");
 
 function button () {
     buttonElement.addEventListener("click", resortValue);
@@ -24,6 +24,7 @@ function resortValue(event) {
     displayLoading();
     const userInput = document.querySelector('input');
     const inputValue = userInput.value;
+    console.log(`%c ${inputValue}`, 'color: red; font-weight: bold')
     const urlResportValue = inputValue.replace(/ /g, '%20');
     getSkiData(urlResportValue);
 }
@@ -42,6 +43,7 @@ function hideLoading() {
     loader.classList.remove('display');
 }
 async function getSkiData(resort) {
+    console.log(`%c ${resort}`, 'color: orange; font-weight: bold')
     const url = `https://ski-resort-forecast.p.rapidapi.com/${resort}/forecast?units=i&el=top`;
     const options = {
         method: 'GET',
@@ -183,5 +185,6 @@ function addForecast(Obj) {
     const rainPMText = document.createTextNode(`Rainfall: ${parseFloat(pm['rain'])} in`);
     rainPMEl.appendChild(rainPMText);
 };
+
 
 button();

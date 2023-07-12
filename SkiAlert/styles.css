@@ -63,7 +63,7 @@ nav {
     transform: translateX(16px);
   }
   
-  /* Rounded sliders */
+  Rounded sliders
   .slider.round {
     border-radius: 34px;
   }
@@ -115,10 +115,6 @@ nav {
 #header {
     background-image: url('forecast.png');
     color: white;
-}
-
-#forecastContainer {
-    margin: 20px;
 }
 
 #footer {
