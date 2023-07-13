@@ -27,6 +27,7 @@ function resortValue(event) {
     console.log(`%c ${inputValue}`, 'color: red; font-weight: bold')
     const urlResportValue = inputValue.replace(/ /g, '%20');
     getSkiData(urlResportValue);
+    // getSkiMap(urlResportValue);
 }
 
 const loader = document.getElementById('loading');
@@ -139,7 +140,7 @@ function addForecast(Obj) {
 
     const snowEl = document.getElementById('snowAm');
     snowEl.textContent = '';
-    const snowText = document.createTextNode(`Snowfall: ${(am['snow'])} in`);
+    const snowText = document.createTextNode(`Snowfall: ${parseFloat(am['snow'])} in`);
     snowEl.appendChild(snowText);
 
     const rainEl = document.getElementById('rainAm');
@@ -187,4 +188,33 @@ function addForecast(Obj) {
 };
 
 
+// ************************
+// async function getSkiMap(resort) {
+//     const url = `https://trailapi-trailapi.p.rapidapi.com/trails/${resort}/maps/`;
+//     const options = {
+//         method: 'GET',
+//         headers: {
+//             'X-RapidAPI-Key': 'd99226e11emshc6beb07ec3b35f3p1d14d9jsna675fbeffb1a',
+//             'X-RapidAPI-Host': 'trailapi-trailapi.p.rapidapi.com'
+//         }
+//     };
+
+//     try {
+//         const response = await fetch(url, options);
+//         const result = await response.text();
+//         console.log(result);
+//     } catch (error) {
+//         console.error(error);
+//     }
+// };
+
+
+
+
+
+
+
+
+
 button();
+
